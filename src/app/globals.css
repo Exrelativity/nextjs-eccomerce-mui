@@ -2,32 +2,40 @@
 @tailwind components;
 @tailwind utilities;
 
+@import '@fontsource-variable/montserrat';
+
+
+@layer components {
+  .all-\[unset\] {
+    all: unset;
+  }
+}
+
 :root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --h-3-font-family: "Montserrat-Bold", Helvetica;
+  --h-3-font-size: 24px;
+  --h-3-font-style: normal;
+  --h-3-font-weight: 700;
+  --h-3-letter-spacing: 0.10000000149011612px;
+  --h-3-line-height: 32px;
+  --link-font-family: "Montserrat-Bold", Helvetica;
+  --link-font-size: 14px;
+  --link-font-style: normal;
+  --link-font-weight: 700;
+  --link-letter-spacing: 0.20000000298023224px;
+  --link-line-height: 24px;
+  --primary-color: rgba(35, 166, 240, 1);
+  --second-text-color: rgba(115, 115, 115, 1);
+  --small-font-family: "Montserrat-Regular", Helvetica;
+  --small-font-size: 12px;
+  --small-font-style: normal;
+  --small-font-weight: 400;
+  --small-letter-spacing: 0.20000000298023224px;
+  --small-line-height: 16px;
+  --text-color: rgba(37, 43, 66, 1);
+  --green-color: #23856D;
+  --light-gray-text: #BDBDBD;
+  --success-text-color: #2DC071;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-}
-
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
-}
