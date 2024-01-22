@@ -9,8 +9,8 @@ type Props = {}
 
 function BestServices({ }: Props) {
     return (
-        <Box className="w-full">
-            <Container className="flex flex-col items-center justify-center gap-4">
+        <Box className="w-full flex justify-center items-center flex-row">
+            <Box className="container max-md:p-4 flex flex-col items-center justify-center gap-4">
                 <Box className="flex w-full flex-col items-center justify-center gap-2">
                     <Box className="flex text-sm font-semibold"><Typography className="text-sm font-semibold text-[#737373]">Featured Products</Typography></Box>
                     <Box className="flex text-lg font-semibold"><Typography className="text-lg font-semibold text-black">THE BEST SERVICES</Typography></Box>
@@ -33,7 +33,7 @@ function BestServices({ }: Props) {
                         <Box className="flex w-full flex-row items-center justify-center"><Typography className="text-center text-sm">Overcame any hurdle or any other problem.</Typography></Box>
                     </Box>
                 </Box>
-            </Container>
+            </Box>
         </Box>
     )
 }

@@ -21,8 +21,8 @@ function BestSellerProduct({ loadMore }: Props) {
 
 
     return (
-        <Box className="w-full">
-            <Container className="flex flex-grow flex-col items-center justify-center gap-4">
+        <Box className="flex w-full flex-row items-center justify-center">
+            <Box className="container flex flex-grow flex-col items-center justify-center gap-4 max-md:p-4">
                 <Box className="flex w-full flex-col items-center justify-center gap-2">
                     <Box className="flex text-sm font-semibold"><Typography className="text-sm font-semibold text-[#737373]">Featured Products</Typography></Box>
                     <Box className="flex text-lg font-semibold"><Typography className="text-lg font-semibold text-black">BESTSELLER PRODUCTS</Typography></Box>
@@ -40,7 +40,7 @@ function BestSellerProduct({ loadMore }: Props) {
                     }
                 </Box>
                 {loadMore && <Box className="flex flex-col border border-[#23A6F0] text-[#23A6F0]"><Button className="rounded-md border border-[#23A6F0] text-[#23A6F0]" type="button" onClick={() => setProducts(() => data?.products ? data.products : [])}>LOAD MORE PRODUCTS</Button></Box>}
-            </Container>
+            </Box>
 
         </Box>
     )
