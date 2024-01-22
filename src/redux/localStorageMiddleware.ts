@@ -1,3 +1,4 @@
+"use client";
 import { Middleware } from 'redux';
 
 const localStorageMiddleware: Middleware = store => next => action => {

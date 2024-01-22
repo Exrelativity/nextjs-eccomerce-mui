@@ -1,3 +1,4 @@
+"use client";
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
 import { RootState } from '../redux/store';
 
@@ -31,7 +32,7 @@ export const ApiService = createApi({
       query: () => '/products/all',
     }),
 
-    getSingleProduct: builder.query<any, string>({
+    getSingleProduct: builder.query<any, any>({
       query: (productId) => `/products/${productId}`,
     }),
 

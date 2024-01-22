@@ -8,7 +8,7 @@ export default function ApplicationLogo({ className, style }: { className?: stri
   return (
     <Box
       onClick={() => router.push("/")}
-      className={`flex flex-row text-black text-2xl font-bold hover:scale-105 hover:cursor-pointer ${className}`} style={style}
+      className={`flex flex-row text-black text-2xl max-md:flex-shrink font-bold hover:scale-105 hover:cursor-pointer ${className}`} style={style}
     >
       Bandage
     </Box>

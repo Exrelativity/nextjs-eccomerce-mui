@@ -1,4 +1,4 @@
-
+"use client";
 import { DecrementInWishListAction, DeleteFromWishListAction, IncrementInWishListAction } from '@/redux/actions/WishListActions';
 import { WishListProductType } from '@/redux/reducers/WishListReducer';
 import { Box } from '@mui/material';

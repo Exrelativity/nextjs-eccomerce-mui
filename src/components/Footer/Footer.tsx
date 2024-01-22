@@ -9,7 +9,6 @@ import TwitterIcon from "@/public/assets/icons/blue-twitter.svg";
 type Props = {}
 
 function Footer({ }: Props) {
-
     return (
         <>
             <Box className="flex w-full items-center justify-center bg-[#FAFAFA]">
@@ -25,7 +24,7 @@ function Footer({ }: Props) {
                 </Box>
             </Box>
             <Box className="-mb-4 flex min-h-80 w-full flex-col items-center justify-center gap-4 bg-white py-10 font-semibold text-black">
-                <Box className="container flex flex-grow flex-row items-start justify-between gap-4 py-10 max-md:flex-wrap max-md:content-start max-md:justify-start max-md:gap-4 max-md:py-5">
+                <Box className="container flex flex-grow flex-row flex-wrap items-start justify-between gap-4 py-10 max-md:flex-col max-md:content-start max-md:justify-start max-md:gap-4 max-md:p-4 max-md:py-5">
                     <Box className='flex flex-col items-start justify-start gap-4 py-5 text-xl max-md:w-1/3'>
                         <header className="footer-title">Services</header>
                         <Link href={"/"} className="link-hover link text-nowrap text-[#737373] no-underline">Branding</Link>
@@ -62,7 +61,10 @@ function Footer({ }: Props) {
                                     <Typography className="label-text">Enter your email address</Typography>
                                 </label>
                                 <Box className="flex w-auto flex-row flex-nowrap">
-                                    <TextField type="text" placeholder="username@site.com" className="bg-gray rounded-e-none border-white hover:border-white" />
+                                    <TextField type="text" placeholder="username@site.com" className="bg-gray rounded-e-none border-white hover:border-white" sx={{
+                                        borderTopRightRadius: "0px",
+                                        borderBottomRightRadius: "0px"
+                                    }} />
                                     <Button type="button" className="rounded-s-none bg-[#23A6F0] text-white hover:border-white hover:bg-green">Subscribe</Button>
                                 </Box>
                             </Box>

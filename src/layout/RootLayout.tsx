@@ -5,6 +5,7 @@ import "@/app/globals.css";
 import { PropsWithChildren } from "react";
 import StoreProvider from "@/redux/storeProvider";
 import { CssBaseline, StyledEngineProvider, ThemeProvider, createTheme, Box } from "@mui/material";
+import { ToastContainer } from "react-toastify";
 
 const montserrat = Montserrat({
   weight: ['100', '200', '300', '400', '500', '700'],
@@ -31,9 +32,10 @@ export default function RootLayout({ children, ...props }: PropsWithChildren) {
     <html lang="en">
       <meta
         name="viewport"
-        content="width=device-width, user-scalable=no, initial-scale=1.0, minimum-scale=1.0, maximum-scale=10, minimal-ui"
+        content="width=device-width, initial-scale=1.0"
       />
       <body
+        style={{ width: "100vw", height: "100vh", margin: 0, padding: 0, right: 0, left: 0, display: "block" }}
         className={`${montserrat.className}`}
       >
         <StyledEngineProvider injectFirst>
@@ -42,6 +44,7 @@ export default function RootLayout({ children, ...props }: PropsWithChildren) {
             <StoreProvider>
               <Box>
                 {children},
+                <ToastContainer />
               </Box>
             </StoreProvider>
           </ThemeProvider>

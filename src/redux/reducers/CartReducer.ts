@@ -1,3 +1,4 @@
+"use client";
 import { PayloadAction, createReducer } from '@reduxjs/toolkit';
 import { AddToCartAction, DecrementInCartAction, DeleteFromCartAction, IncrementInCartAction } from '../actions/CartAction';
 import { ProductCardData } from './../../components/ProductCard/ProductCard';

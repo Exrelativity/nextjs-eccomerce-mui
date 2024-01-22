@@ -1,4 +1,4 @@
-
+"use client";
 import { ProductCardData } from '../../components/ProductCard/ProductCard';
 import {PayloadAction, createReducer} from '@reduxjs/toolkit';
 import { AddToWishListAction, DecrementInWishListAction, DeleteFromWishListAction, IncrementInWishListAction } from '../actions/WishListActions';

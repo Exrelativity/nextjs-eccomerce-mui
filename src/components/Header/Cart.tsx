@@ -1,3 +1,4 @@
+"use client";
 import { CartProductType } from '@/redux/reducers/CartReducer';
 import { RootState } from '@/redux/store';
 import { calculateCartTotals } from '@/services/Utility';

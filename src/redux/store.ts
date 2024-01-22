@@ -1,3 +1,4 @@
+"use client";
 import { combineReducers, configureStore } from '@reduxjs/toolkit';
 import { ApiService } from '../services/Api';
 import ProductReducer from './reducers/ProductReducer';

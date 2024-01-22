@@ -1,3 +1,4 @@
+"use client";
 import { ProductCardData } from './../../components/ProductCard/ProductCard';
 import {PayloadAction, createReducer} from '@reduxjs/toolkit';
 import { Add_Product_ACTION, Delete_Product_ACTION, Get_Product_ACTION, Product_ACTION, Search_Product_ACTION, Update_Product_ACTION } from '../actions/ProductAction';

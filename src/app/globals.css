@@ -4,13 +4,6 @@
 
 @import '@fontsource-variable/montserrat';
 
-
-@layer components {
-  .all-\[unset\] {
-    all: unset;
-  }
-}
-
 :root {
   --h-3-font-family: "Montserrat-Bold", Helvetica;
   --h-3-font-size: 24px;

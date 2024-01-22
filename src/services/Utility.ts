@@ -1,3 +1,4 @@
+"use client";
 import { CartProductType } from "@/redux/reducers/CartReducer";
 
 

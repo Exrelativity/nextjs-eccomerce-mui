@@ -1,4 +1,4 @@
-
+"use client";
 import { RootState } from '@/redux/store';
 import { calculateCartTotals } from '@/services/Utility';
 import { memoize } from 'proxy-memoize';

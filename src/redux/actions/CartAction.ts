@@ -1,3 +1,4 @@
+"use client";
 import { ProductCardData } from '@/components/ProductCard/ProductCard';
 import {createAction} from '@reduxjs/toolkit';
 

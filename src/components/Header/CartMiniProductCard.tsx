@@ -1,3 +1,4 @@
+"use client";
 import { DecrementInCartAction, DeleteFromCartAction, IncrementInCartAction } from '@/redux/actions/CartAction';
 import { CartProductType } from '@/redux/reducers/CartReducer';
 import { Box, Typography } from '@mui/material';
