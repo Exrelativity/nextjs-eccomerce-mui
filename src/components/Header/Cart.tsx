@@ -1,6 +1,6 @@
 "use client";
 import { CartProductType } from '@/redux/reducers/CartReducer';
-import { RootState } from '@/redux/store';
+import { RootState, useAppSelector } from '@/redux/store';
 import { calculateCartTotals } from '@/services/Utility';
 import { memoize } from 'proxy-memoize';
 import React, { CSSProperties, useEffect, useMemo, useState } from 'react'

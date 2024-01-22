@@ -4,6 +4,7 @@ import { Box, Button, Card, Container, Typography } from '@mui/material';
 import React, { useEffect, useState } from 'react';
 // import { toast } from 'react-toastify';
 import ProductCard, { ProductCardData } from '../ProductCard/ProductCard';
+import LoadingComponent from '../LoadingComponent';
 
 type Props = {
     loadMore?: boolean;
@@ -34,6 +35,9 @@ function BestSellerProduct({ loadMore }: Props) {
                             <ProductCard data={item} />
                         </Card>)
                     })}
+                    {
+                        isLoading && <LoadingComponent />
+                    }
                     {isError && <Box className="flex w-full flex-col items-center justify-center gap-2 p-96 text-center">
                         <Typography className="text-center text-xs font-semibold capitalize text-[#902d2d]">server error occurred while loading product</Typography>
                     </Box>

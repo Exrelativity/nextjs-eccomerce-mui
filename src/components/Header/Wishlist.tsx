@@ -1,13 +1,13 @@
 "use client";
-import { RootState } from '@/redux/store';
+import { RootState, useAppSelector } from '@/redux/store';
 import { calculateCartTotals } from '@/services/Utility';
 import { memoize } from 'proxy-memoize';
 import React, { CSSProperties, useEffect, useMemo, useState } from 'react'
-import { useSelector } from 'react-redux';
 import { WishListProductType } from '@/redux/reducers/WishListReducer';
 import { useRouter } from 'next/navigation';
 import { Box, Button } from '@mui/material';
 import WishlistMiniProductCard from './WishlistMiniProductCard';
+import { useSelector } from 'react-redux';
 
 type Props = {
     className?: String;

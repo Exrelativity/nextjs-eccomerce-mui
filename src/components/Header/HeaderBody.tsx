@@ -1,5 +1,4 @@
 "use client";
-import React, { CSSProperties, useState } from 'react'
 import ApplicationLogo from '../ApplicationLogo';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
@@ -12,7 +11,16 @@ import CartIcon from "@/public/assets/icons/blue-cart.svg";
 import SearchIcon from "@/public/assets/icons/blue-search.svg";
 import WishlistIcon from "@/public/assets/icons/blue-wishlist.svg";
 import MenuIcon from "@/public/assets/icons/black-menu.svg";
+import { CartProductType } from '@/redux/reducers/CartReducer';
+import { RootState, useAppSelector } from '@/redux/store';
+import { calculateCartTotals } from '@/services/Utility';
+import { memoize } from 'proxy-memoize';
+import React, { CSSProperties, useEffect, useMemo, useState } from 'react'
+import CartMiniProductCard from './CartMiniProductCard';
 import { Box, Button } from '@mui/material';
+import { WishListProductType } from '@/redux/reducers/WishListReducer';
+import WishlistMiniProductCard from './WishlistMiniProductCard';
+import { useSelector } from 'react-redux';
 
 type Props = {
   className?: String;
@@ -20,6 +28,25 @@ type Props = {
 }
 
 function HeaderBody({ className, style }: Props) {
+  const [carts, setCarts] = useState<CartProductType[]>([]);
+  const [totalCartAmount, setTotalCartAmount] = useState<number>(0);
+  const [totalCartQuantity, setTotalCartQuantity] = useState<number>(0);
+  const [totalCartItems, setTotalCartItems] = useState<number>(0);
+  const cartMemozied: CartProductType[] = useSelector<RootState, CartProductType[]>(memoize((state) => state.cart.carts))
+  useEffect(() => {
+    setCarts((carts) => cartMemozied);
+  }, [cartMemozied]);
+
+  const cartList = useMemo(() => {
+    return carts.map((item, index) => (<CartMiniProductCard key={index} data={item} />))
+  }, [carts]);
+
+  useEffect(() => {
+    const { totalAmount, totalQuantity, totalItems } = calculateCartTotals(carts)
+    setTotalCartAmount(totalAmount);
+    setTotalCartQuantity(totalQuantity);
+    setTotalCartItems(totalItems)
+  }, [cartMemozied, carts]);
   const pathname = usePathname();
   const links = [
     { href: "/", name: "Home" },
@@ -29,6 +56,26 @@ function HeaderBody({ className, style }: Props) {
     { href: "/contact", name: "Contact" },
     { href: "/pages", name: "Pages" },
   ];
+
+  const [wishlists, setWishLists] = useState<WishListProductType[]>([]);
+  const [totalWishAmount, setTotalWishAmount] = useState<number>(0);
+  const [totalWishQuantity, setTotalWishQuantity] = useState<number>(0);
+  const [totalWishItems, setTotalWishItems] = useState<number>(0);
+  const wishlist_memozied: WishListProductType[] = useSelector<RootState, WishListProductType[]>(memoize((state) => state.wishlist.wishlists))
+  useEffect(() => {
+    setWishLists(() => wishlist_memozied);
+  }, [wishlist_memozied]);
+
+  const wishList = useMemo(() => {
+    return wishlists.map((item, index) => (<WishlistMiniProductCard key={index} data={item} />))
+  }, [wishlists]);
+
+  useEffect(() => {
+    const { totalAmount, totalQuantity, totalItems } = calculateCartTotals(wishlists)
+    setTotalWishAmount(totalAmount);
+    setTotalWishQuantity(totalQuantity);
+    setTotalWishItems(totalItems)
+  }, [wishlist_memozied, wishlists]);
 
   const [wishlistActive, setWishlistActive] = useState(false);
   const [cartActive, setCartActive] = useState(false);
@@ -94,7 +141,7 @@ function HeaderBody({ className, style }: Props) {
                 <Button type="button" className="relative box-border flex flex-row items-center gap-[5px] overflow-hidden rounded-[37px] p-[15px]">
                   <CartIcon onClick={() => { setCartActive(!cartActive); setSearchActive(false); setWishlistActive(false); setUserProfileActive(false); setMenuActive(false); }} className='font-bold hover:scale-110 hover:cursor-pointer' />
                   <Box className="relative mt-[-1.00px] w-fit whitespace-nowrap text-center font-small text-[length:var(--small-font-size)] font-[number:var(--small-font-weight)] leading-[var(--small-line-height)] tracking-[var(--small-letter-spacing)] text-primary-color [font-style:var(--small-font-style)]">
-                    1
+                    {totalCartItems}
                   </Box>
                 </Button>
               </Box>
@@ -110,7 +157,7 @@ function HeaderBody({ className, style }: Props) {
                 <Button type="button" className="relative box-border flex flex-row items-center gap-[5px] overflow-hidden rounded-[37px] p-[15px]">
                   <WishlistIcon onClick={() => { setWishlistActive(!wishlistActive); setSearchActive(false); setCartActive(false); setUserProfileActive(false); setMenuActive(false); }} className='font-bold hover:scale-110 hover:cursor-pointer' />
                   <Box className="relative mt-[-1.00px] w-fit whitespace-nowrap text-center font-small text-[length:var(--small-font-size)] font-[number:var(--small-font-weight)] leading-[var(--small-line-height)] tracking-[var(--small-letter-spacing)] text-primary-color [font-style:var(--small-font-style)]">
-                    1
+                    {totalWishItems}
                   </Box>
                 </Button>
               </Box>
