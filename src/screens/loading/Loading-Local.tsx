@@ -1,5 +1,6 @@
 "use client"; // Error components must be Client Components
 
+import LoadingComponent from "@/components/LoadingComponent";
 import { Suspense } from "react";
 export default function LoadingLocal() {
     return (
@@ -9,7 +10,7 @@ export default function LoadingLocal() {
                 className="dark:bg-dark block h-screen w-full overflow-auto bg-white"
             >
                 <div className="m-auto flex h-full w-full flex-grow flex-col items-center justify-center align-middle">
-                    <div><span className="loading loading-infinity w-[100px] text-red-900"></span></div>
+                    <LoadingComponent />
                 </div>
             </div>
         </Suspense >

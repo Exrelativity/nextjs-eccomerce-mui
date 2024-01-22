@@ -37,7 +37,7 @@ const ProductCard = ({ className, style, data }: Props) => {
     const imageUrl = data.thumbnail;
 
     function viewItem(productId: number) {
-        return router.push(`/${productId}`);
+        return router.push(`product/${productId}`);
     };
 
     const handleMediaEvent = (event: any) => {
