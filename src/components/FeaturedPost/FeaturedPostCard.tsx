@@ -23,13 +23,13 @@ function FeaturedPostCard({ image }: Props) {
                 <Box className="flex flex-row items-center justify-start gap-2 px-2">
                     <Typography className="">
                         Loudest à la Madison #1
-                        (L'integral)
+                        (L&apos;integral)
                     </Typography>
                 </Box>
                 <Box className="flex flex-row items-center justify-start gap-2 px-2">
                     <Typography className="text-[#737373]">
                         We focus on ergonomics and meeting
-                        you where you work. It's only a
+                        you where you work. It&apos;s only a
                         keystroke away.
                     </Typography>
                 </Box>
