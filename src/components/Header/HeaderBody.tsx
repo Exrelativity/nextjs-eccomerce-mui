@@ -107,10 +107,10 @@ function HeaderBody({ className, style }: Props) {
                   </Box>
                 </Button>
               </Box>
-              <Box onClick={() => setUserProfileActive(false)} className={`absolute right-0 top-[65px] z-40 -mr-44 block h-screen w-screen bg-transparent ${userProfileActive ? "ease-in" : "hidden"}`}>
+              <Box onClick={() => setUserProfileActive(false)} className={`absolute right-0 top-[57px] z-40 -mr-44 block h-screen w-screen bg-transparent ${userProfileActive ? "ease-in" : "hidden"}`}>
                 &nbsp;
               </Box>
-              <Box className={`absolute animate-fade-left right-0 top-[65px] z-50 -mr-[0px] block h-screen w-[480px] max-[480px]:w-[100vw] max-[480px]:-mr-2 bg-[rgba(0,0,0,0.5)] ${userProfileActive ? "ease-in" : "hidden"}`}>
+              <Box className={`absolute animate-fade-left right-0 top-[57px] z-50 -mr-[0px] block h-screen w-[480px] max-[480px]:w-[100vw] max-[480px]:-mr-2 bg-[rgba(0,0,0,0.5)] ${userProfileActive ? "ease-in" : "hidden"}`}>
                 {/* <UserNavigation /> */}
               </Box>
             </Box>
@@ -120,10 +120,10 @@ function HeaderBody({ className, style }: Props) {
                   <SearchIcon onClick={() => { setSearchActive(!searchActive); setCartActive(false); setWishlistActive(false); setMenuActive(false); setUserProfileActive(false); }} className='font-bold hover:scale-110 hover:cursor-pointer' />
                 </Button>
               </Box>
-              <Box onClick={() => setSearchActive(false)} className={`absolute right-0 top-[65px] z-40 -mr-44 block h-screen w-screen bg-transparent ${searchActive ? "ease-in" : "hidden"}`}>
+              <Box onClick={() => setSearchActive(false)} className={`absolute right-0 top-[57px] z-40 -mr-44 block h-screen w-screen bg-transparent ${searchActive ? "ease-in" : "hidden"}`}>
                 &nbsp;
               </Box>
-              <Box className={`absolute animate-fade-left right-0 top-[65px] z-50 -mr-[76px] block h-auto w-[480px] max-[480px]:w-[100vw] max-[480px]:-mr-[125px] bg-[rgba(0,0,0,0.5)] ${searchActive ? "ease-in" : "hidden"}`}>
+              <Box className={`absolute animate-fade-left right-0 top-[57px] z-50 -mr-[76px] block h-auto w-[480px] max-[480px]:w-[100vw] max-[480px]:-mr-[125px] bg-[rgba(0,0,0,0.5)] ${searchActive ? "ease-in" : "hidden"}`}>
                 <Box className='flex h-auto w-full flex-grow flex-col items-start justify-start gap-4 bg-white p-2 text-black'>
                   <Box className={`relative z-40 flex w-full flex-row content-center items-center justify-center gap-1 p-2`}>
                     <Box className={`relative flex h-9 w-full flex-row items-center rounded-md bg-[#F5F5F5] hover:scale-110`}>
@@ -145,10 +145,10 @@ function HeaderBody({ className, style }: Props) {
                   </Box>
                 </Button>
               </Box>
-              <Box onClick={() => setCartActive(false)} className={`absolute right-0 top-[65px] z-40 -mr-44 block h-screen w-screen bg-transparent ${cartActive ? "ease-in" : "hidden"}`}>
+              <Box onClick={() => setCartActive(false)} className={`absolute right-0 top-[57px] z-40 -mr-44 block h-screen w-screen bg-transparent ${cartActive ? "ease-in" : "hidden"}`}>
                 &nbsp;
               </Box>
-              <Box className={`absolute animate-fade-left right-0 top-[65px] z-50 -mr-[55px] block h-screen w-[480px] max-[480px]:w-[100vw] max-[480px]:-mr-[70px] bg-[rgba(0,0,0,0.5)] ${cartActive ? "ease-in" : "hidden"}`}>
+              <Box className={`absolute animate-fade-left right-0 top-[57px] z-50 -mr-[55px] block h-screen w-[480px] max-[480px]:w-[100vw] max-[480px]:-mr-[70px] bg-[rgba(0,0,0,0.5)] ${cartActive ? "ease-in" : "hidden"}`}>
                 <Cart />
               </Box>
             </Box>
@@ -161,10 +161,10 @@ function HeaderBody({ className, style }: Props) {
                   </Box>
                 </Button>
               </Box>
-              <Box onClick={() => setWishlistActive(false)} className={`absolute right-0 top-[65px] z-40 -mr-44 block h-screen w-screen bg-transparent ${wishlistActive ? "ease-in" : "hidden"}`}>
+              <Box onClick={() => setWishlistActive(false)} className={`absolute right-0 top-[57px] z-40 -mr-44 block h-screen w-screen bg-transparent ${wishlistActive ? "ease-in" : "hidden"}`}>
                 &nbsp;
               </Box>
-              <Box className={`absolute animate-fade-left right-0 top-[65px] z-50 mr-[15px] block h-screen w-[480px] max-[480px]:w-[100vw] max-[480px]:-mr-2 bg-[rgba(0,0,0,0.5)] ${wishlistActive ? "ease-in" : "hidden"}`}>
+              <Box className={`absolute animate-fade-left right-0 top-[57px] z-50 mr-[15px] block h-screen w-[480px] max-[480px]:w-[100vw] max-[480px]:-mr-2 bg-[rgba(0,0,0,0.5)] ${wishlistActive ? "ease-in" : "hidden"}`}>
                 <Wishlist />
               </Box>
             </Box>
@@ -174,10 +174,10 @@ function HeaderBody({ className, style }: Props) {
                   <MenuIcon onClick={() => { setMenuActive(!menuActive); setWishlistActive(false); setSearchActive(false); setCartActive(false); setUserProfileActive(false); }} className='font-bold hover:scale-110 hover:cursor-pointer' />
                 </Button>
               </Box>
-              <Box onClick={() => setMenuActive(false)} className={`absolute right-0 top-[65px] z-40 -mr-44 block h-screen w-screen bg-transparent ${menuActive ? "ease-in" : "hidden"}`}>
+              <Box onClick={() => setMenuActive(false)} className={`absolute right-0 top-[57px] z-40 -mr-44 block h-screen w-screen bg-transparent ${menuActive ? "ease-in" : "hidden"}`}>
                 &nbsp;
               </Box>
-              <Box className={`absolute animate-fade-left right-0 top-[65px] z-50 -mr-[134px] block h-screen w-[480px] max-[480px]:w-[100vw] max-[480px]:mr-[-7px] bg-white ${menuActive ? "ease-in" : "hidden"}`}>
+              <Box className={`absolute animate-fade-left right-0 top-[57px] z-50 -mr-[134px] block h-screen w-[480px] max-[480px]:w-[100vw] max-[480px]:mr-[-7px] bg-white ${menuActive ? "ease-in" : "hidden"}`}>
                 <Box className="flex flex-col justify-start gap-10">
                   {links.map((items, index) => (
                     <Link key={index} href={items.href} className={`flex flex-row items-center justify-center gap-1 text-xl text-black no-underline hover:scale-105`}>
