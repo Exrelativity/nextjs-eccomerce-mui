@@ -7,6 +7,7 @@ import GuestLayout from "@/layout/GuestLayout";
 import React from 'react';
 import LoadingComponent from '@/components/LoadingComponent';
 import ProductDetails from '@/components/ProductDetails/ProductDetails';
+import SubFooter from '@/components/Footer/SubFooter';
 
 function ProductDetailScreen({ productId }: { productId: Number }) {
     const { error, isLoading, isSuccess, isError, data } = useGetSingleProductQuery(productId);
@@ -25,6 +26,9 @@ function ProductDetailScreen({ productId }: { productId: Number }) {
                     <BestSellerProduct />
                 </Box>
                 <Partners />
+            </Box>
+            <Box className="relative flex h-auto w-full flex-col items-center justify-center gap-[150px] bg-white">
+                <SubFooter />
             </Box>
         </GuestLayout>
     )
