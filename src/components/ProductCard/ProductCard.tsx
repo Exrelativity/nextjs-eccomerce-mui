@@ -67,7 +67,9 @@ const ProductCard = ({ className, style, data }: Props) => {
         <Box onMouseEnter={handleMediaEvent}
             onMouseLeave={handleMediaEvent}
             onTouchStart={handleMediaEvent}
-            onTouchEnd={handleMediaEvent} className={`relative flex-shrink-0 flex w-full z-0 rounded-md flex-col h-[500px] flex-grow justify-between items-center hover:cursor-pointer ${className}`} style={style}>
+            onTouchEnd={handleMediaEvent}
+            // onDblClick={() => viewItem(data.id)}
+            className={`relative flex-shrink-0 flex w-full z-0 rounded-md flex-col h-[500px] flex-grow justify-between items-center hover:cursor-pointer ${className}`} style={style}>
             <Box className={`flex h-[328px] w-full flex-grow flex-col items-end justify-start gap-1 bg-cover bg-no-repeat`} style={{ backgroundImage: `url(${imageUrl ?? "/assets/new-images/sliderImage.jpeg"})`, backgroundSize: "cover" }}>
                 <Box className='mr-0 mt-0 flex h-full w-full flex-col'>
                     {memoizedMouseValue && (<Box className='flex flex-row content-end items-center justify-end p-2'>
