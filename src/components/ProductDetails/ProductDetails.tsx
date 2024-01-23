@@ -32,12 +32,7 @@ function ProductDetails({ data }: Props) {
                 <Box className="container flex flex-col items-center justify-center">
                     <Box className="flex w-full flex-row items-center justify-center gap-1 max-md:flex-col">
                         <Box className="flex w-1/2 flex-col items-center justify-center max-md:w-full">
-                            <ImageGallery
-                                originalHeight="auto"
-                                originalWidth="100%"
-                                thumbnailHeight="100px"
-                                thumbnailWidth="100px"
-                                items={images} />
+                            <ImageGallery items={images} />
                         </Box>
                         <Box className="flex h-auto w-1/2 flex-grow flex-col items-start justify-start max-md:w-full">
                             <ProductDetailCard data={data} />
