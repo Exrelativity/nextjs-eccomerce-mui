@@ -1,7 +1,7 @@
 "use client";
 import React from 'react'
 import { ProductCardData } from '../ProductCard/ProductCard'
-import { Box, Typography } from '@mui/material'
+import { Box, Divider, Typography } from '@mui/material'
 import GrIcon from '@/public/assets/icons/greater-than-gray.svg';
 import ImageGallery from "react-image-gallery";
 import "react-image-gallery/styles/css/image-gallery.css";
@@ -41,13 +41,14 @@ function ProductDetails({ data }: Props) {
                 </Box>
             </Box>
             <Box className="flex w-full flex-col items-center justify-center bg-white py-5">
-                <Box className="container flex flex-col items-center justify-center">
-                    <Box className="flex w-full flex-row items-center justify-center gap-4 border-b p-10 max-md:flex-col max-md:gap-1">
-                        <Box className="flex items-center justify-center px-3 py-2 max-md:w-full"><Typography className="text-nowrap text-xl font-bold text-[#737373]">Description</Typography></Box>
-                        <Box className="flex items-center justify-center px-3 py-2 max-md:w-full"><Typography className="text-nowrap text-xl font-bold text-[#737373]">Additional Information</Typography></Box>
-                        <Box className="flex items-center justify-center px-3 py-2 max-md:w-full"><Typography className="text-nowrap text-xl font-bold text-[#737373]">Reviews (0)</Typography></Box>
+                <Box className="container flex flex-col items-center justify-center gap-3">
+                    <Box className="flex w-full flex-row items-center justify-center gap-4 border-b py-5 max-md:flex-col max-md:gap-1">
+                        <Box className="flex items-center justify-center px-3 py-1 max-md:w-full"><Typography className="text-nowrap text-xl font-bold text-[#737373]">Description</Typography></Box>
+                        <Box className="flex items-center justify-center px-3 py-1 max-md:w-full"><Typography className="text-nowrap text-xl font-bold text-[#737373]">Additional Information</Typography></Box>
+                        <Box className="flex items-center justify-center px-3 py-1 max-md:w-full"><Typography className="text-nowrap text-xl font-bold text-[#737373]">Reviews (0)</Typography></Box>
                     </Box>
-                    <Box className="flex w-full flex-row items-start justify-start gap-1">
+                    <Divider className="flex w-full flex-row py-2" />
+                    <Box className="flex w-full flex-row items-start justify-start gap-1 py-5">
                         <Box className="flex w-7/12 flex-col items-start justify-start max-md:w-full">
                             <Typography className="text-normal text-start">{data.description}</Typography>
                         </Box>
