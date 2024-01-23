@@ -16,8 +16,9 @@ bun dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-Live URL Open [https://nextjs-eccomerce-fdujeiq8q-exrelativity.vercel.app/](https://nextjs-eccomerce-fdujeiq8q-exrelativity.vercel.app/) with your browser to see the result.
-or [https://nextjs-eccomerce-mui.vercel.app/](https://nextjs-eccomerce-mui.vercel.app/)  
+Live URL Open with your browser to see the result.
+
+[https://nextjs-eccomerce-mui.vercel.app/](https://nextjs-eccomerce-mui.vercel.app/)  
 
 You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
