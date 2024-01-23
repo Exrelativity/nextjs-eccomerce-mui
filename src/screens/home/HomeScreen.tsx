@@ -18,7 +18,7 @@ export default function HomeScreen() {
         <BestServices />
         <FeaturedPost />
         <MiniAboutUs />
-        {/* <DesigningBetterExperience /> */}
+        <DesigningBetterExperience />
       </Box>
       <Box className="relative flex h-auto w-full flex-col items-center justify-center gap-[150px] bg-[#FAFAFA]">
         <SubFooter />
