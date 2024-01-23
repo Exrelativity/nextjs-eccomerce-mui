@@ -1,4 +1,4 @@
-import { Box, Button, Typography } from '@mui/material';
+import { Box, Button, Card, Typography } from '@mui/material';
 import React from 'react';
 import GreaterThanIcon from '@/public/assets/icons/greater-than.svg';
 import ClockIcon from '@/public/assets/icons/clock.svg';
@@ -10,7 +10,7 @@ type Props = {
 
 function FeaturedPostCard({ image }: Props) {
     return (
-        <Box className={`relative z-0 flex h-[605px] w-full max-w-[348px] flex-shrink-0 flex-grow flex-col items-center justify-between gap-2 rounded-md hover:cursor-pointer max-md:max-w-full`}>
+        <Card className={`relative z-0 flex h-[605px] w-full max-w-[348px] flex-shrink-0 flex-grow flex-col items-center justify-between gap-2 rounded-md hover:cursor-pointer max-md:max-w-full`}>
             <Box className={`flex h-[300px] w-full flex-grow flex-col items-start justify-start gap-1 bg-cover bg-no-repeat`} style={{ backgroundImage: `url(${image ?? "/assets/new-images/sliderImage.jpeg"})`, backgroundSize: "cover" }}>
                 <Button type="button" className="m-4 bg-[#E74040] text-xs text-white"> New</Button>
             </Box>
@@ -54,8 +54,7 @@ function FeaturedPostCard({ image }: Props) {
                     <Button type="button"> <GreaterThanIcon /></Button>
                 </Box>
             </Box>
-
-        </Box>
+        </Card>
     )
 }
 
