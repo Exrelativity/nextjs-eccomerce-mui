@@ -1,11 +1,13 @@
 "use client";
 import { AddToCartAction } from '@/redux/actions/CartAction';
 import { AddToWishListAction } from '@/redux/actions/WishListActions';
-import { Box, Typography } from '@mui/material';
-import Image from 'next/image';
+import { Box, Button, Typography } from '@mui/material';
 import { useRouter } from 'next/navigation';
 import React, { CSSProperties, useMemo, useState } from 'react'
 import { useDispatch } from 'react-redux';
+import WishIcon from "@/public/assets/new-icons/heart.svg";
+import CartIcon from "@/public/assets/new-icons/cart.svg";
+import ViewIcon from "@/public/assets/new-icons/view.svg";
 
 type Props = {
     className?: String;
@@ -69,15 +71,21 @@ const ProductCard = ({ className, style, data }: Props) => {
             <Box className={`flex h-[328px] w-full flex-grow flex-col items-end justify-start gap-1 bg-cover bg-no-repeat`} style={{ backgroundImage: `url(${imageUrl ?? "/assets/new-images/sliderImage.jpeg"})`, backgroundSize: "cover" }}>
                 <Box className='mr-0 mt-0 flex h-full w-full flex-col'>
                     {memoizedMouseValue && (<Box className='flex flex-row content-end items-center justify-end p-2'>
-                        <Box className='flex h-10 w-10 items-center justify-center rounded-full bg-white hover:bg-gray-300' onClick={() => viewItem(data.id)}>
-                            <Image className='' src="/assets/new-icons/view.svg" alt={"icon"} width={28} height={28} />
-                        </Box>
+                        <Button type="button" className='flex h-10 w-10 items-center justify-center rounded-full bg-white hover:bg-gray-300' onClick={() => viewItem(data.id)}>
+                            <ViewIcon />
+                        </Button>
                     </Box>)}
                     <Box className='flex w-full flex-grow flex-col bg-transparent p-1'>&nbsp;</Box>
                     {memoizedMouseValue && (<Box className='flex h-16 w-full flex-row items-center justify-around justify-self-end bg-black text-center align-middle text-white'>
-                        <Box className="rounded-md bg-blue px-5 py-2" onClick={() => handleAddToCart(data)}>Add To Cart</Box>
+                        <Button type="button" className="flex flex-row gap-1 rounded-sm bg-blue" onClick={() => handleAddToCart(data)}>
+                            <CartIcon />
+                            <Typography className="text-white">
+                                Add To Cart
+                            </Typography>
+                        </Button>
                         <Box className='flex flex-row content-center items-center justify-between p-2'>
-                            <Box onClick={() => handleAddToWishList(data)} className='flex h-10 w-10 items-center justify-center rounded-full bg-white hover:bg-gray-300'><Image src="/assets/new-icons/heart.svg" alt={"icon"} width={32} height={32} /></Box>
+                            <Button type="button" onClick={() => handleAddToWishList(data)} className='flex h-10 w-10 items-center justify-center rounded-full bg-white hover:bg-gray-300'>
+                                <WishIcon /></Button>
                         </Box>
                     </Box>)}
                 </Box>

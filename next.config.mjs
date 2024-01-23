@@ -27,6 +27,15 @@ const nextConfig = {
     
         return config
       },
+      images:{
+        remotePatterns: [
+          {
+            protocol: 'https',
+            hostname: 'cdn.dummyjson.com',
+          },
+        ],
+        // domains: ['cdn.dummyjson.com'],
+      },
 };
 
 export default nextConfig;

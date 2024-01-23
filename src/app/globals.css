@@ -31,4 +31,11 @@
   --success-text-color: #2DC071;
 }
 
+.image-gallery-image{
+  @apply min-h-96
+}
+.image-gallery-swipe {
+  @apply bg-black
+}
+
 
